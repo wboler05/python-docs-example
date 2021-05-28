@@ -4,7 +4,7 @@
 Prints MyClass with n=5
 '''
 
-from my_class import MyClass
+from .my_class import MyClass
 
 def a():
   '''
@@ -13,6 +13,7 @@ def a():
 
   cls = MyClass(5)
   c = cls.calc()
+  cls.print()
 
   print('A: {}'.format(cls.a))
   print('B: {}'.format(cls.b))

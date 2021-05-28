@@ -1,8 +1,16 @@
 #!/usr/bin/env python
 
+'''
+An example class that randomly generates two arrays
+and adds them together.  It provides an example to show
+with Doxygen and Sphinx, and does nothing special.
+'''
+
 import numpy as np
 
-class MyClass(object):
+from .my_other_class import MyOtherClass
+
+class MyClass(MyOtherClass):
   '''
   A class that randomly generates 2 arrays and adds them together.
   '''
@@ -11,17 +19,18 @@ class MyClass(object):
     '''
     Instantiates two arrays
 
-    @param n : int : size of arrays
+    @param n size of arrays
     '''
-    self.a = np.random.sample(n)
-    self.b = np.random.sample(n)
+    self.a = np.random.sample(n) # Does something
+    self.b = np.random.sample(n) # Does something as well
 
   def calc(self):
     '''
     Adds two arrays a and b and returns sum
 
-    @return : np.array : Sum of 'a' + 'b'
+    @return np.array Sum of 'a' + 'b'
     '''
-    return self.a + self.b
+    self.c = self.a + self.b
+    return self.c
 
 
